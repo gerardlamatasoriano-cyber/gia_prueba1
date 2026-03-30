@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GIA Digital Systems</title>
-  <meta name="description" content="GIA Digital Systems helps companies improve efficiency through AI, automation and digital systems." />
+  <meta
+    name="description"
+    content="GIA Digital Systems helps companies improve efficiency through AI, automation and digital systems."
+  />
   <style>
     :root {
       --bg: #0b1220;
@@ -21,7 +24,9 @@
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,8 +38,15 @@
       min-height: 100vh;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     .container {
       width: min(calc(100% - 40px), var(--max));
@@ -115,7 +127,14 @@
       font-size: 0.95rem;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links button {
+      font: inherit;
+    }
+
+    .nav-links a:hover,
+    .nav-links button:hover {
+      color: var(--text);
+    }
 
     .btn {
       display: inline-flex;
@@ -313,63 +332,6 @@
       padding: 18px;
     }
 
-    .modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(5, 10, 20, 0.72);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 2000;
-}
-
-.modal-overlay.active {
-  display: flex;
-}
-
-.modal-box {
-  width: min(100%, 520px);
-  background: #0f182a;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 28px;
-  position: relative;
-}
-
-.modal-box h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.5rem;
-}
-
-.modal-box p {
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 40px;
-  height: 40px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  color: var(--text);
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-    
     .bars {
       display: flex;
       align-items: end;
@@ -548,33 +510,34 @@
     }
 
     .contact-form {
-  display: grid;
-  gap: 14px;
-  margin-top: 20px;
-}
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.05);
-  color: var(--text);
-  font: inherit;
-  outline: none;
-}
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      font: inherit;
+      outline: none;
+    }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: var(--muted);
-}
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--muted);
+    }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: rgba(95,179,255,0.45);
-  box-shadow: 0 0 0 3px rgba(95,179,255,0.12);
-}
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: rgba(95,179,255,0.45);
+      box-shadow: 0 0 0 3px rgba(95,179,255,0.12);
+    }
+
     .contact-card ul {
       list-style: none;
       padding: 0;
@@ -634,6 +597,70 @@
       flex-wrap: wrap;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 22px;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 20, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 3000;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(100%, 560px);
+      background: linear-gradient(180deg, rgba(17,26,46,0.98), rgba(11,18,32,0.98));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+    }
+
+    .modal-box h3 {
+      margin: 0 0 12px;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .modal-box p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .modal-close:hover {
+      transform: scale(1.04);
+      background: rgba(255,255,255,0.10);
     }
 
     @media (max-width: 1080px) {
@@ -700,7 +727,7 @@
         <a href="#process">Process</a>
         <a href="#results">Results</a>
         <a href="#contact">Contact</a>
-        <button class="btn btn-secondary" id="openCallModal" type="button">Book a Call</button>
+        <button class="btn btn-secondary" type="button" data-open-modal="call">Book a Call</button>
       </div>
     </div>
   </nav>
@@ -716,7 +743,7 @@
         </p>
 
         <div class="hero-actions">
-          <button class="btn btn-primary" id="openCallModalHero" type="button">Start Your Project</button>
+          <button class="btn btn-primary" type="button" data-open-modal="call">Start Your Project</button>
           <a href="#services" class="btn btn-secondary">Explore Services</a>
         </div>
 
@@ -890,25 +917,30 @@
         </article>
 
         <article class="contact-card" id="contact">
-  <h3>Let’s build your next digital system</h3>
-  <p>
-    Tell me a bit about your business, your current process challenges, or the type of automation you want to explore.
-  </p>
+          <h3>Let’s build your next digital system</h3>
+          <p>
+            Tell me a bit about your business, your current process challenges, or the type of automation you want to explore.
+          </p>
 
-  <form class="contact-form" action="mailto:hello@giadigitalsystems.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <input type="text" name="company" placeholder="Company name" />
-    <textarea name="message" rows="5" placeholder="Tell me about your project or current bottlenecks..." required></textarea>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
+          <form class="contact-form" action="mailto:hello@giadigitalsystems.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="company" placeholder="Company name" />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell me about your project or current bottlenecks..."
+              required
+            ></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
 
-  <ul>
-    <li><strong>Email:</strong> hello@giadigitalsystems.com</li>
-    <li><strong>LinkedIn:</strong> Gerard La Mata / GIA Digital Systems</li>
-    <li><strong>Focus:</strong> Automation, AI, process optimization, digital systems</li>
-  </ul>
-</article>
+          <ul>
+            <li><strong>Email:</strong> hello@giadigitalsystems.com</li>
+            <li><strong>LinkedIn:</strong> Gerard La Mata / GIA Digital Systems</li>
+            <li><strong>Focus:</strong> Automation, AI, process optimization, digital systems</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -933,58 +965,72 @@
       <span>Automation, AI & Digital Efficiency for Modern Businesses</span>
     </div>
   </footer>
-  <div class="modal-overlay" id="callModal">
-  <div class="modal-box">
-    <button class="modal-close" id="closeCallModal" type="button" aria-label="Close">×</button>
-    <h3>Book a Call</h3>
-    <p>
-      Choose the option that works best for you. You can either book a meeting directly or send a quick request.
-    </p>
 
-    <div class="modal-actions">
-      <a class="btn btn-primary" href="https://calendly.com/tu-enlace" target="_blank" rel="noopener noreferrer">
-        Open Calendly
-      </a>
-      <a class="btn btn-secondary" href="#contact" id="goToContact">
-        Send a Request
-      </a>
+  <div class="modal-overlay" id="callModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+      <button class="modal-close" id="closeCallModal" type="button" aria-label="Close modal">×</button>
+
+      <h3 id="callModalTitle">Book a Call</h3>
+      <p>
+        Let’s discuss your current processes, bottlenecks and opportunities for automation, AI or digital systems.
+      </p>
+
+      <div class="modal-actions">
+        <a
+          class="btn btn-primary"
+          href="https://calendly.com/g-lamata-giadigitalsystems/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Calendly
+        </a>
+
+        <a class="btn btn-secondary" href="#contact" id="goToContact">
+          Send a Request
+        </a>
+      </div>
     </div>
   </div>
-</div>
+
   <script>
-  const openCallModal = document.getElementById('openCallModal');
-  const closeCallModal = document.getElementById('closeCallModal');
-  const callModal = document.getElementById('callModal');
-  const goToContact = document.getElementById('goToContact');
+    const callModal = document.getElementById('callModal');
+    const closeCallModal = document.getElementById('closeCallModal');
+    const goToContact = document.getElementById('goToContact');
+    const modalTriggers = document.querySelectorAll('[data-open-modal="call"]');
 
-  openCallModal.addEventListener('click', () => {
-    callModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
+    function openModal() {
+      callModal.classList.add('active');
+      callModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
 
-  closeCallModal.addEventListener('click', () => {
-    callModal.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-
-  callModal.addEventListener('click', (e) => {
-    if (e.target === callModal) {
+    function closeModal() {
       callModal.classList.remove('active');
+      callModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
-  });
 
-  goToContact.addEventListener('click', () => {
-    callModal.classList.remove('active');
-    document.body.style.overflow = '';
-  });
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', openModal);
+    });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      callModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
+    closeCallModal.addEventListener('click', closeModal);
+
+    callModal.addEventListener('click', (e) => {
+      if (e.target === callModal) {
+        closeModal();
+      }
+    });
+
+    goToContact.addEventListener('click', () => {
+      closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && callModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
