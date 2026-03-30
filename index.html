@@ -922,18 +922,30 @@
             Tell me a bit about your business, your current process challenges, or the type of automation you want to explore.
           </p>
 
-          <form class="contact-form" action="mailto:g.lamata@giadigitalsystems.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <input type="text" name="company" placeholder="Company name" />
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Tell me about your project or current bottlenecks..."
-              required
-            ></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
+  <!-- CLAVE WEB3FORMS -->
+  <input type="hidden" name="access_key" value="8f0f1846-5967-4fba-a4c6-6f30867a5024">
+
+  <!-- OPCIONAL PRO -->
+  <input type="hidden" name="subject" value="New Lead - GIA Digital Systems">
+  <input type="hidden" name="from_name" value="GIA Website">
+  <input type="hidden" name="redirect" value="false">
+
+  <!-- CAMPOS -->
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="email" name="email" placeholder="Your email" required />
+  <input type="text" name="company" placeholder="Company name" />
+
+  <textarea
+    name="message"
+    rows="5"
+    placeholder="Tell me about your project or current bottlenecks..."
+    required
+  ></textarea>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
 
           <ul>
             <li><strong>Email:</strong> g.lamata@giadigitalsystems.com</li>
